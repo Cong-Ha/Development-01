@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  novena-website:
+    image: uzomaki/development-01:latest
+    ports:
+      - "8080:80"
+    container_name: novena-medical-website
+    restart: unless-stopped
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
